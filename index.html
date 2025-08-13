@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>classes in objects</h1>
+    <h2 id="hello"></h2>
+
+    <button onclick="submission()"
+        style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 10px; background-color: yellow; color: green;">submit</button>
+
+    <button onclick="cancellation()"
+        style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 10px; background-color:tomato; color: red;">cancel</button>
+
+    <script>
+
+        class railway {
+
+            submit(username, ticketnumber) {
+
+                this.passenger = username
+                this.ticket = ticketnumber
+
+                alert("form has been submitted by" + this.passenger + "and the ticket number is" + ticketnumber)
+            }
+
+            cancel(user, ticketnumber) {
+                this.passenger = user
+                this.ticket = ticketnumber
+
+                alert("form has been cancelled by" + this.passenger + "and the ticket number is" + ticketnumber)
+            }
+        }
+        class trains extends railway {
+            booking() {
+                alert("your seat number hasbeen booked")
+            }
+        }
+
+        let john = new railway
+        function submission() {
+            john.submit("john", 456)
+        }
+
+        let harsh = new railway
+        function cancellation() {
+            john.cancel("harsh", 111)
+        }
+
+
+        let kabir = new trains
+        kabir.submit("kabir", 486)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
